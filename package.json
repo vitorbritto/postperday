@@ -1,0 +1,35 @@
+{
+  "name": "postperday",
+  "version": "0.1.7",
+  "description": "Encontre as publicações marcadas com a hashtag 1postperday facilmente.",
+  "main": "index.js",
+  "bin": {
+    "postperday": "bin/postperday",
+    "ppd": "bin/postperday"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vitorbritto/postperday"
+  },
+  "keywords": [
+    "1postperday",
+    "facebook",
+    "blog",
+    "artigos",
+    "campanha",
+    "iniciativa"
+  ],
+  "author": "Vitor Britto <code@vitorbritto.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vitorbritto/postperday/issues"
+  },
+  "homepage": "https://github.com/vitorbritto/postperday",
+  "dependencies": {
+    "open": "0.0.5",
+    "simlog": "^0.1.3"
+  }
+}

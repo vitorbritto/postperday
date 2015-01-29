@@ -1,0 +1,54 @@
+#!/usr/bin/env node
+
+'use strict';
+
+// Init Config
+var logger = require('simlog'),
+    pkg    = require('../package'),
+    isH    = process.argv.indexOf('-h') !== -1 || process.argv.indexOf('--help') !== -1,
+    isV    = process.argv.indexOf('-v') !== -1 || process.argv.indexOf('--version') !== -1,
+    isE    = process.argv.indexOf('-e') !== -1 || process.argv.indexOf('--exec') !== -1;
+
+// Program Information
+var pkgname     = pkg.name,
+    pkgver      = pkg.version,
+    pkgdesc     = pkg.description,
+    pkgauthor   = pkg.author,
+    pkglicense  = pkg.license;
+
+// Help
+var getHelp = function() {
+
+    console.log('');
+    console.log(' ------------------------------------------------------------------------------');
+    console.log(' %s - %s', pkgname.toUpperCase(), pkgver);
+    console.log(' %s', pkgdesc);
+    console.log(' ------------------------------------------------------------------------------');
+    console.log('');
+    console.log(' Como utilizar: %s [options]', pkgname);
+    console.log('');
+    console.log('       -h, --help      Instruções de Uso');
+    console.log('       -v, --version   Versão do Programa');
+    console.log('       -e, --exec      Executa o Programa');
+    console.log('');
+    console.log('');
+    console.log(' Copyright (c) %s', pkgauthor);
+    console.log(' Licensed under the %s license.\n', pkglicense);
+    console.log(' ------------------------------------------------------------------------------');
+    console.log('');
+
+};
+
+// CLI
+if (isH) {
+    getHelp();
+}
+
+if (isV) {
+    return console.log('Versão: %s', pkgver);
+}
+
+if (isE) {
+    logger.done('Executando!');
+    module.exports = require('../lib/postperday');
+}
