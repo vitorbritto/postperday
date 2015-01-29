@@ -1,6 +1,6 @@
 {
   "name": "postperday",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "Encontre as publicações marcadas com a hashtag 1postperday facilmente.",
   "main": "index.js",
   "bin": {
